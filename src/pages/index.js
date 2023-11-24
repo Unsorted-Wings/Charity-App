@@ -9,6 +9,7 @@ import ParallaxComponent from "@/components/ParallaxComponent";
 import AboutPage from '@/components/About'
 import ContactPage from '@/components/ContactUs'
 import DonationPage from '@/components/DonationPage';
+import CreateEvent from '@/components/CreateEvent';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,6 +36,8 @@ export default function Home() {
       <Element name="ContactPage">
       <ContactPage />
       </Element>
+
+      {/* <CreateEvent /> */}
 
       
       {/* <UserProfile /> */}
