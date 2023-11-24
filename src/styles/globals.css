@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+
+  body{
+    background-image: url("../assets/image3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: rgb(225 29 72) !important;
+}
+
+/* Login.css */
+.sign-in {
+  animation: slideInLeft 0.3s ease-in-out forwards;
+}
+
+.sign-up {
+  animation: slideInRight 0.3s ease-in-out forwards;
+}
+
+.relative {
+  position: relative;
+}
+
+.underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(251 113 133); /* Change this to your desired color */
+  transition: width 0.3s ease;
+}
+
+.relative:hover .underline {
+  width: 100%;
+}
