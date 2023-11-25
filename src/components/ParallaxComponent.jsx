@@ -3,7 +3,7 @@ import React from 'react';
 const ParallaxCompnent = () => {
   return (
     <div
-      className="h-80 bg-cover bg-center relative flex items-center justify-center text-white"
+      className="h-[36rem] bg-cover bg-center relative flex items-center justify-center text-white"
     >
       {/* Translucent black filter */}
       <div className="absolute inset-0 bg-black opacity-60"></div>

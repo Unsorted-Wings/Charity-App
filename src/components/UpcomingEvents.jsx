@@ -3,10 +3,13 @@ import EventCard from './EventCard';
 
 const UpcomingEvents = () => {
   return (
-    <div className="py-12 h-fit bg-rose-200">
-      <h1 className="mx-5 text-5xl font-bold mb-8 text-rose-600">Discover Upcoming Events</h1>
+    <div className="py-12 h-fit bg-rose-200 flex-col">
+      <div className='text-center'>
+        <h1 className="mx-5 text-5xl font-bold mb-8 text-rose-600">Discover Upcoming Events</h1>
+      </div>
 
-      <div className="px-4 mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+      <div className="px-24 py-10 mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-14">
         {upcomingEvents.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}
