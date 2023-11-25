@@ -1,7 +1,10 @@
 // SignInForm.js
 import React from 'react';
+import { signIn } from 'next-auth/react';
+import { useRef } from 'react';
 
 const SignInForm = () => {
+
   return (
     <form className="p-10 bg-rose-100 rounded-md shadow-md max-w-md mx-auto">
       {/* Sign In form content */}
@@ -15,6 +18,7 @@ const SignInForm = () => {
           id="email"
           type="text"
           placeholder="Email"
+          
         />
       </div>
       <div className="mb-8">
@@ -26,9 +30,10 @@ const SignInForm = () => {
           id="password"
           type="password"
           placeholder="Password"
+          
         />
       </div>
-      <button className="bg-rose-500 text-white text-lg px-8 py-3 rounded-xl transition-transform transform hover:scale-105 hover:bg-rose-600 hover:shadow-md">
+      <button onClick={signIn()} className="bg-rose-500 text-white text-lg px-8 py-3 rounded-xl transition-transform transform hover:scale-105 hover:bg-rose-600 hover:shadow-md">
         Sign In
       </button>
     </form>

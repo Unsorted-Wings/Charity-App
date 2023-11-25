@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
+
+import {Link} from 'next/link';
 
 
 const Navbar = () => {
@@ -14,8 +14,7 @@ const Navbar = () => {
 
         <div className="flex items-center space-x-10">
 
-          <Link href="#" passHref>
-            <ScrollLink to="HomePage"
+            <Link to="HomePage"
               spy={true}
               smooth={true}
               duration={500}
@@ -23,11 +22,9 @@ const Navbar = () => {
               className="relative text-lg text-white hover:text-rose-400 transition-all duration-300">
               Home
               <span className="underline"></span>
-            </ScrollLink>
-          </Link>
+            </Link>
 
-          <Link href="#" passHref>
-            <ScrollLink to="UpcomingEventsPage"
+            <Link to="UpcomingEventsPage"
               spy={true}
               smooth={true}
               duration={500}
@@ -35,11 +32,9 @@ const Navbar = () => {
               className="relative text-lg text-white hover:text-rose-400 transition-all duration-300">
               Upcoming Events
               <span className="underline"></span>
-            </ScrollLink>
-          </Link>
+            </Link>
 
-          <Link href="#" passHref>
-            <ScrollLink to="AboutPage"
+            <Link to="AboutPage"
               spy={true}
               smooth={true}
               duration={500}
@@ -47,11 +42,9 @@ const Navbar = () => {
               className="relative text-lg text-white hover:text-rose-400 transition-all duration-300">
               About
               <span className="underline"></span>
-            </ScrollLink>
-          </Link>
+            </Link>
 
-          <Link href="#" passHref>
-            <ScrollLink to="ContactPage"
+            <Link to="ContactPage"
               spy={true}
               smooth={true}
               duration={500}
@@ -59,8 +52,7 @@ const Navbar = () => {
               className="relative text-lg text-white hover:text-rose-400 transition-all duration-300">
               Contact
               <span className="underline"></span>
-            </ScrollLink>
-          </Link>
+            </Link>
 
           <Link
             href="/Login1"
