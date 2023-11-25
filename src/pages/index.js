@@ -3,19 +3,17 @@ import { Element } from 'react-scroll';
 import Navbar from '@/components/NavBar'
 import HomePage from '@/components/Home'
 import CardSlider from '@/components/CardSlider1'
-import UserProfile from '@/components/UserProfile'
 import UpcomingEventsPage from '@/components/UpcomingEvents'
 import ParallaxComponent from "@/components/ParallaxComponent";
 import AboutPage from '@/components/About'
 import ContactPage from '@/components/ContactUs'
-import DonationPage from '@/components/DonationPage';
-import CreateEvent from '@/components/CreateEvent';
+import UserProfile from '@/components/UserProfile'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div>
+    <div id='main'>
       <Navbar />
 
       <Element name="HomePage">
@@ -37,10 +35,12 @@ export default function Home() {
       <ContactPage />
       </Element>
 
+      <></>
+
       {/* <CreateEvent /> */}
 
       
-      {/* <UserProfile /> */}
+      <UserProfile />
       
     </div>
   )

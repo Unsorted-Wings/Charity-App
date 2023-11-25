@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { MdClose } from 'react-icons/md';
+import Localbase from 'localbase';
 
 const CreateEvent = ({ onClose }) => {
+  let db = new Localbase("EventDB");
   const [eventData, setEventData] = useState({
     category: '',
     startDate: '',

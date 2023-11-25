@@ -49,27 +49,27 @@ const data = [
   {
     name: `John Morgan`,
     img: `../assets/one.webp`,
-    review: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsum labore odio quae similique nostrum impedit magni fugiat molestias velit nobis nisi maxime, saepe tenetur perferendis corrupti rem neque assumenda?`,
+    review: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolor necessitatibus quam fugit maiores nam facere omnis nisi cupiditate officiis.`,
   },
   {
     name: `Ellie Anderson`,
     img: `../assets/two.webp`,
-    review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere blanditiis totam veniam harum libero qui amet. Laboriosam doloribus adipisci cumque neque soluta, pariatur labore suscipit, corporis amet veritatis quae?`,
+    review: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolor necessitatibus quam fugit maiores nam facere omnis nisi cupiditate officiis.`,
   },
   {
     name: `Nia Adebayo`,
     img: `../assets/three.webp`,
-    review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere blanditiis totam veniam harum libero qui amet. Laboriosam doloribus adipisci cumque neque soluta, pariatur labore suscipit, corporis amet veritatis quae?`,
+    review: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolor necessitatibus quam fugit maiores nam facere omnis nisi cupiditate officiis.`,
   },
   {
     name: `Rigo Louie`,
     img: `../assets/one.webp`,
-    review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere blanditiis totam veniam harum libero qui amet. Laboriosam doloribus adipisci cumque neque soluta, pariatur labore suscipit, corporis amet veritatis quae?`,
+    review: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolor necessitatibus quam fugit maiores nam facere omnis nisi cupiditate officiis.`,
   },
   {
     name: `Mia Williams`,
     img: `../assets/two.webp`,
-    review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere blanditiis totam veniam harum libero qui amet. Laboriosam doloribus adipisci cumque neque soluta, pariatur labore suscipit, corporis amet veritatis quae?`,
+    review: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto dolor necessitatibus quam fugit maiores nam facere omnis nisi cupiditate officiis.`,
   },
 ];
 
