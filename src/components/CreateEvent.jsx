@@ -1,9 +1,20 @@
+import set from 'localbase/localbase/api/actions/set';
 import React, { useState } from 'react';
 import { MdClose } from 'react-icons/md';
-import Localbase from 'localbase';
+import {
+  collection,
+  addDoc,
+  getDoc,
+  querySnapshot,
+  query,
+  onSnapshot,
+  deleteDoc,
+  doc,
+} from 'firebase/firestore';
+import { db } from '../firebase';
+
 
 const CreateEvent = ({ onClose }) => {
-  let db = new Localbase("EventDB");
   const [eventData, setEventData] = useState({
     category: '',
     startDate: '',
@@ -11,7 +22,7 @@ const CreateEvent = ({ onClose }) => {
     venue: '',
   });
 
-  const [items, setItems] = useState([{ name: '', quality: '', unit: 'kgs' }]);
+  const [items, setItems] = useState([{ itemName: '', quantity: '', unit: 'kgs' }]);
 
   const unitOptions = ['kgs', 'liters', 'pieces', 'meters'];
 
@@ -27,8 +38,8 @@ const CreateEvent = ({ onClose }) => {
   };
 
   const handleAddItem = () => {
-    if (items.length < 10) {
-      setItems([...items, { name: '', quality: '', unit: 'kgs' }]);
+    if (items.length < 10 && itemName != '' && quantity != '') {
+      setItems([...items, { itemName: '', quantity: '', unit: 'kgs' }]);
     }
   };
 
@@ -38,21 +49,34 @@ const CreateEvent = ({ onClose }) => {
     setItems(updatedItems);
   };
 
-  const handleCreateEvent = () => {
-    // Logic to handle creating the event
-    console.log('Event Created:', { ...eventData, items });
+  const handleCreateEvent = async (e) => {
+    // Validate the form data
+    if (eventData.category !='' && eventData.startDate != '' && !eventData.endDate !='' && eventData.venue != '') {
+      // set data from input into the object 
+      await addDoc(collection(db, 'Events'), {
+        category: eventData.name.trim(),
+        startDate: eventData.startDate,
+        endDate: eventData.endDate,
+        venue: eventData.venue,
+      });
+      setEventData({
+        category: '',
+        startDate: '',
+        endDate: '',
+        venue: '',
+      });
+      
 
+    }
+    
     // Reset the form data
-    setEventData({
-      category: '',
-      startDate: '',
-      endDate: '',
-      venue: '',
-    });
+   
 
     // Reset the items
     setItems([{ name: '', quality: '', unit: 'kgs' }]);
   };
+
+  
 
   return (
     <div className="fixed m-0 inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
@@ -72,6 +96,16 @@ const CreateEvent = ({ onClose }) => {
                 type="text"
                 name="category"
                 value={eventData.category}
+                onChange={handleInputChange}
+                className="mt-1 p-2 w-full md:w-2/3 border rounded-md focus:outline-none focus:border-rose-500"
+              />
+            </div>
+            <div className="mb-2">
+              <label className="block text-sm font-medium text-rose-700">Id</label>
+              <input
+                type="number"
+                name="Id"
+                value={eventData.Id}
                 onChange={handleInputChange}
                 className="mt-1 p-2 w-full md:w-2/3 border rounded-md focus:outline-none focus:border-rose-500"
               />
